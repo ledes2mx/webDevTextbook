@@ -10,6 +10,7 @@ function App() {
       <Routes>
         <Route path="/quizzes" element={<Quizzes />} />
         <Route path="/quiz" element={<Quiz />} />
+        <Route path="/quiz/:quizSlug/question/:questionSlug" element={<Question />} />
       </Routes>
     </div>
   );
