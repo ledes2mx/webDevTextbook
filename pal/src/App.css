@@ -1,0 +1,64 @@
+.App {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+
+.swatch {
+  display: inline-block;
+  width: 200px;
+  height: 200px;
+  margin: 10px;
+  border-radius: 10px;
+  box-sizing: border-box;
+
+  color: white;
+  text-shadow: 0 0 3px black;
+  background-color: black;
+
+  position: relative;
+}
+.swatch > .name-field {
+  font-weight: bold;
+  font-size: 1.2em;
+
+  position: absolute;
+  right: 10px;
+  bottom: 10px;
+}
+.swatch > .delete-button {
+  border: none;
+
+  background: none;
+  color: red;
+  text-shadow: 0 0 3px black;
+  font-size: 1.5em;
+
+  position: absolute;
+  right: 10px;
+  top: 10px;
+
+  cursor: pointer;
+}
+.swatch > .delete-button:hover {
+  transform: scale(1.2);
+}
+
+.swatch > .delete-button:active {
+  transform: rotate(15deg) scale(1.2);
+}
+.swatch > .hex-field {
+  position: absolute;
+  left: 10px;
+  top: 10px;
+}
+#picker {
+  display: inline-flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 20px;
+}
+
+#name-input {
+  margin: 20px 0;
+}

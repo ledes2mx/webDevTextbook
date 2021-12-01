@@ -1,0 +1,47 @@
+.App {
+    display: grid;
+    grid-template-columns: auto 1fr;
+    grid-template-rows: 1fr auto;
+    height: 100vh;
+    grid-gap: 10px 40px;
+  }
+  #adder-panel {
+    background-color: lightgray;
+    grid-column: 1 / span 2;
+  
+    display: grid;
+    grid-auto-flow: column;
+    grid-template-rows: auto auto;
+    grid-template-columns: auto 1fr auto;
+    grid-gap: 0 50px;
+    align-items: start;
+  }
+  .panel {
+    padding: 30px;
+  }
+
+  #adder-panel > textarea {
+    height: 6em;
+  }
+  #adder-panel > label {
+    font-weight: bold;
+    font-size: 1.1em;
+  }
+
+  #adder-panel > button {
+    grid-column: 3;
+    grid-row: 2 / span 1;
+  }
+  .author-button {
+    border: none;
+    background: none;
+    font-size: inherit;
+    padding: 0;
+    margin: 0;
+    cursor: pointer;
+  }
+  
+  .author-button:hover {
+    text-decoration: underline;
+  }
+  
