@@ -42,19 +42,19 @@ const initialState = {
 
   function reducer(state, action) {
       switch (Action.type) {
-          case Action.LoadArtists {
+          case Action.LoadArtists: {
               return {
                   ...state,
                   loadArtists: action.payload,
               };
           }
-          case Action.LoadAlbums {
+          case Action.LoadAlbums: {
               return {
                   ...state,
                   loadAlbums: action.payload,
               };
           }
-          case Action.LoadTracks {
+          case Action.LoadTracks: {
               return {
                   ...state,
                   loadTracks: action.payload,
