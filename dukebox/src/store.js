@@ -1,5 +1,6 @@
-import {createStore} from 'redux';
+import {createStore, applyMiddleware} from 'redux';
 import {Action} from './actions';
+import thunk from 'redux-thunk';
 
 const initialState = {
     artists: [
@@ -64,3 +65,5 @@ const initialState = {
               return state;
       }
   }
+
+  export const store = createStore(reducer, initialState, applyMiddleware(thunk));

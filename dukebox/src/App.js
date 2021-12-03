@@ -1,4 +1,5 @@
 import './App.css';
+import {Route, Routes} from 'react-router-dom';
 import {Albums} from './Albums';
 import {Artists} from './Artists';
 import {Tracks} from './Tracks';
@@ -6,9 +7,7 @@ import {Tracks} from './Tracks';
 function App() {
   return (
     <div className="App">
-      <Artists />
-      <Albums />
-      <Tracks />
+      hi.
     </div>
   );
 }
