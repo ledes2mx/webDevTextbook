@@ -46,19 +46,20 @@ const initialState = {
           case Action.LoadArtists: {
               return {
                   ...state,
-                  loadArtists: action.payload,
+                  //[action.payload.slug]: action.payload.LoadArtists,
+                  artists: action.payload,
               };
           }
           case Action.LoadAlbums: {
               return {
                   ...state,
-                  loadAlbums: action.payload,
+                  albums: action.payload,
               };
           }
           case Action.LoadTracks: {
               return {
                   ...state,
-                  loadTracks: action.payload,
+                  tracks: action.payload,
               };
           }
           default:

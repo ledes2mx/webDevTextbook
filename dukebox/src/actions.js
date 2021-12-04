@@ -26,12 +26,43 @@ function assertResponse(response) {
 
 export function fetchArtists() {
     return dispatch => {
-        fetch('https://dukebox.twodee.org:8443/artists')
+        fetch(`https://dukebox.twodee.org:8443/artists`)
             .then(assertResponse)
             .then(response => response.json())
             .then(data => {
                 if (data.ok) {
                     dispatch(loadArtists(data.results));
+                }
+                else {
+                    console.error(data);
+                }
+            });
+    };
+}
+
+export function fetchAlbums(artist) {
+    return dispatch => {
+        fetch(`https://dukebox.twodee.org:8443/artists/${artist}`)
+            .then(assertResponse)
+            .then(response => response.json())
+            .then(data => {
+                if (data.ok) {
+                    dispatch(loadAlbums(data.results));
+                }
+                else {
+                    console.error(data);
+                }
+            });
+    };
+}
+export function fetchTracks(artist, album) {
+    return dispatch => {
+        fetch(`https://dukebox.twodee.org:8443/artists/${artist}/${album}`)
+            .then(assertResponse)
+            .then(response => response.json())
+            .then(data => {
+                if (data.ok) {
+                    dispatch(loadAlbums(data.results));
                 }
                 else {
                     console.error(data);
