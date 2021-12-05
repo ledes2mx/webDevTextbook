@@ -21,7 +21,7 @@ export function Artists(props) {
                 )}
             </ol>
         </div>
-        /*
+        /*\\
 
         FIRST TEST OF ARTISTS THAT WORKS BUT ISNT A LINK
         /*<Fragment>
@@ -33,7 +33,7 @@ export function Artists(props) {
         </Fragment>
         */
         <Fragment>
-            <div className="artist-page">
+            <div className="artists">
                 <Link to={`/albums/${artistEntry}`}>{artistEntry}</Link>
             </div>
         </Fragment>

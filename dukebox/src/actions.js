@@ -62,7 +62,7 @@ export function fetchTracks(artist, album) {
             .then(response => response.json())
             .then(data => {
                 if (data.ok) {
-                    dispatch(loadAlbums(data.results));
+                    dispatch(loadTracks(data.results));
                 }
                 else {
                     console.error(data);

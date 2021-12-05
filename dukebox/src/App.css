@@ -1,0 +1,10 @@
+.artists {
+    margin: 20px;
+    display: flex;
+    flex-direction:column;
+}
+
+.albums {
+    display: flex;
+    flex-direction:column;
+}

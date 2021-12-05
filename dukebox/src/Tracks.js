@@ -8,7 +8,7 @@ export function Tracks(props) {
 
     useEffect(() => {
         dispatch(fetchTracks(artist, album));
-    }, [dispatch]);
+    }, [dispatch, album, artist]);
 
     return (
         <div className="tracks">

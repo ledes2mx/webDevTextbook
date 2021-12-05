@@ -8,22 +8,23 @@ import { Tracks } from "./Tracks";
 
 export function Albums(props) {
     const params = useParams();
-    const {album} = props;
-    const artist = [params.artistEntry];
-    const albumEntry = album.toLocaleString('default', {
-        albums: 'string',
-    });
     const dispatch = useDispatch();
+    const artist = [params.artistSlug];
 
     useEffect(() => {
         dispatch(fetchAlbums(artist));
-    }, [dispatch]);
+    }, [dispatch, artist]);
 
+    const album = fetchAlbums(artist);
+    const albumEntry = album.toLocaleString('default', {
+        album: 'string',
+    });
     return (
-        <Fragment>
-            <div className="album">
-                <Link to={`/albums/${artist}/tracks/${albumEntry}`}>{albumEntry}</Link>
-            </div>
-        </Fragment>
+        <div className="albums">
+            {album.map(album =>
+                 <Link to={`/albums/${artist}/tracks/${album.album}`}>{album.album}</Link>   
+            )}
+        </div>
+        
     );
 }
