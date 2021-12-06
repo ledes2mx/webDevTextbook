@@ -23,6 +23,7 @@ function App() {
           <Artists key={artist.artist} artist={artist} />  
         )}
         <Routes>
+        <Route path="/" />
         <Route path="/albums/:artistSlug" element={<Albums />} />
         <Route path="/albums/:artistSlug/tracks/:albumSlug" element={<Tracks />} /> 
       </Routes>

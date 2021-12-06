@@ -32,11 +32,13 @@ export function Artists(props) {
             </div>
         </Fragment>
         */
-        <Fragment>
-            <div className="artists">
-                <Link to={`/albums/${artistEntry}`}>{artistEntry}</Link>
-            </div>
-        </Fragment>
+       <div className="holder">
+            <Fragment>
+                <div className="artists">
+                    <Link to={`/albums/${artistEntry}`}>{artistEntry}</Link>
+                </div>
+            </Fragment>
+        </div>
 
     );
 }
