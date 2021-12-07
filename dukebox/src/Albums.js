@@ -1,9 +1,7 @@
 import { fetchAlbums } from "./actions";
 import { useEffect } from 'react';
-import {Fragment} from 'react';
 import { useDispatch, useSelector } from "react-redux";
 import {Link} from 'react-router-dom';
-import { Tracks } from "./Tracks";
 import {useParams} from 'react-router-dom';
 
 export function Albums(props) {
@@ -16,7 +14,7 @@ export function Albums(props) {
     }, [dispatch, artist]);
 
     const albums = useSelector(state => state.albums);
-    console.log(albums);
+    //console.log(albums);
 
     return (
         /*
@@ -44,7 +42,7 @@ export function Albums(props) {
             <ol>
                 {albums.map(album =>
                     <li key={album}>
-                        <Link to={`/album/${artist}`}>{album}</Link>
+                        <Link to={`/albums/${artist}/tracks/${album}`}>{album}</Link>
                     </li>
                 )}
             </ol>

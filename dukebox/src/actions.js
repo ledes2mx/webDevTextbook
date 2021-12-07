@@ -1,3 +1,5 @@
+import { isProgressing } from "./store";
+
 export const Action = Object.freeze({
    LoadArtists: 'LoadArtists',
    LoadAlbums: 'LoadAlbums',
@@ -26,32 +28,38 @@ function assertResponse(response) {
 
 export function fetchArtists() {
     return dispatch => {
+        //dispatch(showProgress());
         fetch(`https://dukebox.twodee.org:8443/artists`)
             .then(assertResponse)
             .then(response => response.json())
             .then(data => {
                     dispatch(loadArtists(data));
+                    //dispatch(hideProgress());
             });
     };
 }
 
 export function fetchAlbums(artist) {
     return dispatch => {
+        //dispatch(showProgress());
         fetch(`https://dukebox.twodee.org:8443/artists/${artist}`)
             .then(assertResponse)
             .then(response => response.json())
             .then(data => {
                     dispatch(loadAlbums(data));
+                    //dispatch(hideProgress());
             });
     };
 }
 export function fetchTracks(artist, album) {
     return dispatch => {
+        //dispatch(showProgress());
         fetch(`https://dukebox.twodee.org:8443/artists/${artist}/${album}`)
             .then(assertResponse)
             .then(response => response.json())
             .then(data => {
                     dispatch(loadTracks(data));
+                    //dispatch(hideProgress());
             });
     };
 }

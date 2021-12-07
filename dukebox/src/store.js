@@ -2,8 +2,8 @@ import {createStore, applyMiddleware} from 'redux';
 import {Action} from './actions';
 import thunk from 'redux-thunk';
 
+export const isProgressing = false;
 
-//STATE WON'T UPDATE????
 const initialState = {
     artists: [
       'The Album Leaf',
@@ -69,5 +69,6 @@ const initialState = {
               return state;
       }
   }
+
 
   export const store = createStore(reducer, initialState, applyMiddleware(thunk));

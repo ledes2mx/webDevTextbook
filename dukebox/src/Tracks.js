@@ -1,14 +1,12 @@
 import { fetchTracks } from "./actions";
 import { useEffect } from 'react';
 import { useDispatch, useSelector } from "react-redux";
-import {Link} from 'react-router-dom';
-import {Fragment} from 'react';
 import { useParams } from "react-router";
 
 export function Tracks(props) {
     const params = useParams();
-    const artist = [params.artistSlug];
-    const album = [params.albumSlug];
+    const artist = params.artistSlug;
+    const album = params.albumSlug;
     const dispatch = useDispatch();
 
     useEffect(() => {
@@ -16,15 +14,18 @@ export function Tracks(props) {
     }, [dispatch, album, artist]);
 
     const tracks = useSelector(state => state.tracks);
+    console.log(tracks + "This is the TRACK");
 
     return (
         <div className="tracks">
             <h2>Tracks</h2>
-            {tracks.map(track =>
-                <li key={track}>
-                    <p>{track}</p>
-                </li>
-            )}
+            <ol>
+                {tracks.map(track =>
+                    <li key={track}>
+                        <p>{track}</p>
+                    </li>    
+                )}
+            </ol>
         </div>
     );
 }

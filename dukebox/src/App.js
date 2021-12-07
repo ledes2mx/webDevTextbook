@@ -1,14 +1,13 @@
 import './App.css';
 import {Route, Routes} from 'react-router-dom';
-import {fetchArtists} from './actions';
+import {fetchArtists, hideProgress, showProgress} from './actions';
 import {Albums} from './Albums';
 import {Artists} from './Artists';
 import {Tracks} from './Tracks';
-import { useDispatch, useSelector } from 'react-redux';
+import { useDispatch } from 'react-redux';
 import { useEffect } from 'react';
 
 function App() {
-  const artists = useSelector(state => state.artists);
   const dispatch = useDispatch();
 
   useEffect(() => {
@@ -19,9 +18,9 @@ function App() {
     <div className="App">
       <div className="artists">
         <Routes>
-        <Route path="/artists" element={<Artists />} />
-        <Route path="/albums/:artistSlug" element={<Albums />} />
-        <Route path="/albums/:artistSlug/tracks/:albumSlug" element={<Tracks />} /> 
+          <Route path="/artists" element={<Artists />} />
+          <Route path="/albums/:artistSlug" element={<Albums />} />
+          <Route path="/albums/:artistSlug/tracks/:albumSlug" element={<Tracks />} /> 
       </Routes>
       </div>
     </div>
