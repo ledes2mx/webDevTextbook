@@ -18,12 +18,8 @@ function App() {
   return (
     <div className="App">
       <div className="artists">
-        <h2>Artists</h2>
-        {artists.map(artist =>
-          <Artists key={artist.artist} artist={artist} />  
-        )}
         <Routes>
-        <Route path="/artists" />
+        <Route path="/artists" element={<Artists />} />
         <Route path="/albums/:artistSlug" element={<Albums />} />
         <Route path="/albums/:artistSlug/tracks/:albumSlug" element={<Tracks />} /> 
       </Routes>

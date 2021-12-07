@@ -44,7 +44,8 @@ const initialState = {
   };
 
   function reducer(state, action) {
-      switch (Action.type) {
+      console.log(action);
+      switch (action.type) {
           case Action.LoadArtists: {
               return {
                   ...state,

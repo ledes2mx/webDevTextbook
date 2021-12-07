@@ -117,5 +117,5 @@ export function showMemories(memories) {
   return {type: Action.ShowMemories, payload: memories};
 }
 export function replaceMemory(memory) {
-  return {type: Action.replaceMemory, payload: memory};
+  return {type: Action.ReplaceMemory, payload: memory};
 }

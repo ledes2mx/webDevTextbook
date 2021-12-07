@@ -30,12 +30,7 @@ export function fetchArtists() {
             .then(assertResponse)
             .then(response => response.json())
             .then(data => {
-                if (data.ok) {
-                    dispatch(loadArtists(data.results));
-                }
-                else {
-                    console.error(data);
-                }
+                    dispatch(loadArtists(data));
             });
     };
 }
@@ -46,12 +41,7 @@ export function fetchAlbums(artist) {
             .then(assertResponse)
             .then(response => response.json())
             .then(data => {
-                if (data.ok) {
-                    dispatch(loadAlbums(data.results));
-                }
-                else {
-                    console.error(data);
-                }
+                    dispatch(loadAlbums(data));
             });
     };
 }
@@ -61,12 +51,7 @@ export function fetchTracks(artist, album) {
             .then(assertResponse)
             .then(response => response.json())
             .then(data => {
-                if (data.ok) {
-                    dispatch(loadTracks(data.results));
-                }
-                else {
-                    console.error(data);
-                }
+                    dispatch(loadTracks(data));
             });
     };
 }

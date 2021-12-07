@@ -22,7 +22,7 @@ export function Tracks(props) {
             <h2>Tracks!</h2>
             {track.map(track =>
                 <p key={artist, album, track.track} artist={artist}
-                album={album} track={track} />
+                album={album} track={track}>HELLO!!!</p>
             )}
         </div>
     );
