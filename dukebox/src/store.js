@@ -2,6 +2,8 @@ import {createStore, applyMiddleware} from 'redux';
 import {Action} from './actions';
 import thunk from 'redux-thunk';
 
+
+//STATE WON'T UPDATE????
 const initialState = {
     artists: [
       'The Album Leaf',

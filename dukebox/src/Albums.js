@@ -21,8 +21,8 @@ export function Albums(props) {
         <div className="albums">
             <h2>Albums</h2>
             {album.map(album => 
-                <Tracks key={artist, album.album} artist={artist} album={album} />
-                //<Link key={artist, album.album} artist={artist} album={album} to={`/albums/${artist}/tracks/${album.album}`}>{album.album}</Link>   
+                //<Tracks key={artist, album.album} artist={artist} album={album} />
+                <Link key={artist, album.album} artist={artist} album={album} to={`/albums/${artist}/tracks/${album.album}`}>{album.album}</Link>   
             )}
         </div>
 
