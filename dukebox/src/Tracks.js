@@ -15,14 +15,15 @@ export function Tracks(props) {
         dispatch(fetchTracks(artist, album));
     }, [dispatch, album, artist]);
 
-    const track = useSelector(state => state.tracks);
+    const tracks = useSelector(state => state.tracks);
 
     return (
         <div className="tracks">
-            <h2>Tracks!</h2>
-            {track.map(track =>
-                <p key={artist, album, track.track} artist={artist}
-                album={album} track={track}>HELLO!!!</p>
+            <h2>Tracks</h2>
+            {tracks.map(track =>
+                <li key={track}>
+                    <p>{track}</p>
+                </li>
             )}
         </div>
     );

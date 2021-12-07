@@ -44,7 +44,7 @@ export function Albums(props) {
             <ol>
                 {albums.map(album =>
                     <li key={album}>
-                        <Link to={`/artist/${album}`}>{album}</Link>
+                        <Link to={`/album/${artist}`}>{album}</Link>
                     </li>
                 )}
             </ol>
