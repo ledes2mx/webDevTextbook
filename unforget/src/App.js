@@ -1,5 +1,5 @@
 import './App.css';
-import {useSelector} from 'react-redux';
+import {useSelector, useDispatch} from 'react-redux';
 import {Memory} from './Memory';
 import {fetchDay} from './actions';
 import { useEffect } from 'react';
