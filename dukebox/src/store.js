@@ -2,7 +2,7 @@ import {createStore, applyMiddleware} from 'redux';
 import {Action} from './actions';
 import thunk from 'redux-thunk';
 
-export const isProgressing = false;
+export var isProgressing = false;
 
 const initialState = {
     artists: [
@@ -44,7 +44,6 @@ const initialState = {
   };
 
   function reducer(state, action) {
-      console.log(action);
       switch (action.type) {
           case Action.LoadArtists: {
               return {

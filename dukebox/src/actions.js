@@ -1,4 +1,4 @@
-import { isProgressing } from "./store";
+//mport { isProgressing } from "./store";
 
 export const Action = Object.freeze({
    LoadArtists: 'LoadArtists',

@@ -1,6 +1,6 @@
 import './App.css';
 import {Route, Routes} from 'react-router-dom';
-import {fetchArtists, hideProgress, showProgress} from './actions';
+import {fetchArtists} from './actions';
 import {Albums} from './Albums';
 import {Artists} from './Artists';
 import {Tracks} from './Tracks';

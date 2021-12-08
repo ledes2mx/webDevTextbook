@@ -14,7 +14,6 @@ export function Tracks(props) {
     }, [dispatch, album, artist]);
 
     const tracks = useSelector(state => state.tracks);
-    console.log(tracks + "This is the TRACK");
 
     return (
         <div className="tracks">
